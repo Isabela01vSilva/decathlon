@@ -41,23 +41,38 @@ Os atletas são então ordenados de forma decrescente pela pontuação total, e 
 - TypeScript
 - CSS
 - Node.js 14.17.x+
-
+ 
 ---
 
-## Como rodar o projeto
+## Passos para rodar o projeto
 
-\`\`\`bash
-# Clone o repositório
-git clone https://github.com/[Isabela01vSilva]/decathlon.git
+1. Clone o repositório:
 
-# Entre na pasta do projeto
-cd decathlon-angular
+```bash
+git clone https://github.com/Isabela01vSilva/decathlon.git
+```
 
-# Instale as dependências
-npm install
+2. Acesse a pasta do projeto:
 
-# Rode a aplicação
+```bash
+cd posts-manager
+```
+
+3. Instale as dependências:
+
+```bash
+npm i
+```
+
+4. Rode a aplicação Angular:
+
+```bash
 ng serve
-\`\`\`
+```
 
-Acesse em `http://localhost:4200`
+5. Acesse no navegador:
+
+```
+http://localhost:4200
+```
+

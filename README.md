@@ -8,7 +8,7 @@ O sistema processa os resultados das 10 modalidades do Decathlon Olímpico, calc
 
 ---
 
-## 📋 Sobre o desafio
+## Sobre o desafio
 
 A aplicação lê dois arquivos JSON de entrada:
 - `resultados.json`: pontuações brutas dos atletas em cada uma das 10 modalidades
@@ -34,7 +34,7 @@ Os atletas são então ordenados de forma decrescente pela pontuação total, e 
 
 ---
 
-##  Tecnologias
+## Tecnologias
 
 - Angular 14+
 - PrimeNG
@@ -44,7 +44,7 @@ Os atletas são então ordenados de forma decrescente pela pontuação total, e 
 
 ---
 
-##  Como rodar o projeto
+## Como rodar o projeto
 
 \`\`\`bash
 # Clone o repositório

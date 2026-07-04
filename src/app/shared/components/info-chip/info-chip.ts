@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-info-chip',
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './info-chip.html',
   styleUrl: './info-chip.css',
 })
-export class InfoChip {}
+export class InfoChip {
+  @Input() icon!: string;
+  @Input() label!: string;
+}

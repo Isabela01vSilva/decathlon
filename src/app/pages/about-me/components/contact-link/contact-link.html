@@ -1,0 +1,8 @@
+<div class="info-chip">
+  <a [href]="url" [target]="url.startsWith('mailto:') ? '_self' : '_blank'"
+    [rel]="url.startsWith('mailto:') ? null : 'noopener noreferrer'" class="contact-link">
+
+    <i [class]="icon"></i>
+    <span>{{ label }}</span>
+  </a>
+</div>

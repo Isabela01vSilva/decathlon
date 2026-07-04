@@ -1,0 +1,15 @@
+.info-chip {
+  display: inline-flex;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-chip a {
+  display: inline-flex;
+  align-items: center;
+  color: #000000c9;
+  text-decoration: none;
+  gap: 10px;
+
+}

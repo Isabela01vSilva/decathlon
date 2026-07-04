@@ -1,78 +1,59 @@
-# Decathlon Angular
+# Decathlon
 
-Empresa: MarketData
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
 
-Aplicação Angular desenvolvida como teste técnico para vaga de Front-end.
+## Development server
 
-O sistema processa os resultados das 10 modalidades do Decathlon Olímpico, calcula a pontuação de cada atleta e exibe uma classificação geral, com suporte a empates e exportação dos dados em CSV.
-
----
-
-## Sobre o desafio
-
-A aplicação lê dois arquivos JSON de entrada:
-- `resultados.json`: pontuações brutas dos atletas em cada uma das 10 modalidades
-- `sistema_pontuacao.json`: constantes (A, B, C) usadas no cálculo de pontos de cada modalidade
-
-A pontuação de cada prova é calculada com as fórmulas oficiais do Decathlon:
-
-- **Provas de pista** (tempo menor = melhor): `Points = INT(A(B - P)^C)`
-- **Provas de campo** (distância/altura maior = melhor): `Points = INT(A(P - B)^C)`
-
-Os atletas são então ordenados de forma decrescente pela pontuação total, e em caso de empate, dividem a mesma posição (ex: 3º-4º lugar).
-
----
-
-## Funcionalidades
-
-- Listagem de todos os atletas com pontuação total e posição final
-- Tratamento de empates na classificação
-- Exportação da tabela de resultados em CSV
-- Tela "Sobre mim" com foto, experiências e habilidades
-- Menu de navegação entre as telas
-- Layout responsivo
-
----
-
-## Tecnologias
-
-- Angular 14+
-- PrimeNG
-- TypeScript
-- CSS
-- Node.js 14.17.x+
- 
----
-
-## Passos para rodar o projeto
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/Isabela01vSilva/decathlon.git
-```
-
-2. Acesse a pasta do projeto:
-
-```bash
-cd posts-manager
-```
-
-3. Instale as dependências:
-
-```bash
-npm i
-```
-
-4. Rode a aplicação Angular:
+To start a local development server, run:
 
 ```bash
 ng serve
 ```
 
-5. Acesse no navegador:
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-```
-http://localhost:4200
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
 ```
 
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

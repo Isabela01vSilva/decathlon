@@ -1,0 +1,28 @@
+<div class="table-scroll-wrapper">
+  <p-table
+    [value]="results"
+    [scrollable]="true"
+    scrollHeight="flex"
+    styleClass="results-p-table"
+    [rowStyleClass]="null"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="col-posicao">Posição</th>
+        <th *ngFor="let col of columns">{{ col.header }}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-athlete let-rowIndex="rowIndex">
+      <tr [ngClass]="rowHighlightClass(rowIndex)">
+        <td class="col-posicao">{{ athlete.posicao }}</td>
+        <td *ngFor="let col of columns">
+          <ng-container [ngSwitch]="col.field">
+            <span *ngSwitchCase="'nome'">{{ athlete.nome }}</span>
+            <span *ngSwitchDefault>{{ formatNumber(athlete[col.field]) }}</span>
+          </ng-container>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

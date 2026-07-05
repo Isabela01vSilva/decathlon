@@ -1,1 +1,19 @@
-<p>results works!</p>
+<section class="results-page">
+  <header class="results-header">
+    <h1>Resultados</h1>
+    <button
+      label="Exportar CSV"
+      icon="pi pi-download"
+      styleClass="p-button-rounded export-btn"
+      (onClick)="exportarCsv()"
+    ></button>
+  </header>
+
+  <app-results-table [results]="results"></app-results-table>
+
+  <p class="results-footnote">
+    Nota: atletas empatados dividem a posição. O intervalo indica a faixa de
+    colocação ocupada pelos atletas com a mesma pontuação total.
+  </p>
+</section>
+

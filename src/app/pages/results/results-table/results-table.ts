@@ -12,69 +12,15 @@ import { ResultsService } from '@service/results.service';
   styleUrls: ['./results-table.css'],
 })
 export class ResultsTableComponent implements OnInit {
-  @Input() results: AthleteResult[] = [];
 
   private readonly resultsService: ResultsService = inject(ResultsService);
 
   athletes = this.resultsService.athletes;
 
-  columns: ColumnDef[] = [
-    {
-      header: 'Posição',
-      field: 1,
-    },
-    {
-      header: 'Nome do Atleta',
-      field: 2,
-    },
-    {
-      header: '100 m',
-      field: 5,
-    },
-    {
-      header: 'Long jump',
-      field: 3,
-    },
-    {
-      header: 'Shot put',
-      field: 4,
-    },
-    {
-      header: 'High jump',
-      field: 5,
-    },
-    {
-      header: '400 m',
-      field: 6,
-    },
-    {
-      header: '110 m hurdles',
-      field: 7,
-    },
-    {
-      header: 'Discus throw',
-      field: 8,
-    },
-    {
-      header: 'Pole vault',
-      field: 9,
-    },
-    {
-      header: 'Javelin throw',
-      field: 10,
-    },
-    {
-      header: '1500 m',
-      field: 11,
-    },
-    {
-      header: 'Total de Pontos',
-      field: 11,
-    },
-  ];
+  @Input() columns!: ColumnDef[]
 
   ngOnInit(): void {
-    console.log(this.athletes());
+    /* console.log(this.athletes()); */
   }
 
   /**
@@ -99,3 +45,6 @@ export class ResultsTableComponent implements OnInit {
     return value.toFixed(2);
   }
 }
+
+
+

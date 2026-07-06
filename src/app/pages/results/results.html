@@ -2,14 +2,11 @@
   <header class="results-header">
     <h1>Resultados</h1>
     <button
-      label="Exportar CSV"
-      icon="pi pi-download"
-      styleClass="p-button-rounded export-btn"
-      (onClick)="exportarCsv()"
-    ></button>
+      (click)="exportarCsv()"
+    >Exportar CSV</button>
   </header>
 
-   <app-results-table></app-results-table>
+   <app-results-table [columns]="columns"></app-results-table>
 
   <p class="results-footnote">
     Nota: atletas empatados dividem a posição. O intervalo indica a faixa de

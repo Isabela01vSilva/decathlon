@@ -9,6 +9,7 @@
   align-items: center;
   gap: 16px;
 }
+
 .profile-name {
     font-size: 22px;
     font-weight: 700;
@@ -29,7 +30,7 @@
 }
 
 ::ng-deep .profile-avatar img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }

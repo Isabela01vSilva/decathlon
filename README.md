@@ -36,11 +36,12 @@ Os atletas são então ordenados de forma decrescente pela pontuação total, e 
 
 ## Tecnologias
 
-- Angular 14+
+- Angular 22
 - PrimeNG
 - TypeScript
 - CSS
-- Node.js 14.17.x+
+- SCSS
+- Node.js 22
  
 ---
 

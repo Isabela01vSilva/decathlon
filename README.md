@@ -1,7 +1,5 @@
 # Decathlon Angular
 
-Empresa: MarketData
-
 Aplicação Angular desenvolvida como teste técnico para vaga de Front-end.
 
 O sistema processa os resultados das 10 modalidades do Decathlon Olímpico, calcula a pontuação de cada atleta e exibe uma classificação geral, com suporte a empates e exportação dos dados em CSV.

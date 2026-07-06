@@ -1,5 +1,6 @@
-<div class="table-scroll-wrapper">
+<div class="results-wrapper">
   <p-table [value]="athletes()" styleClass="results-table">
+
     <ng-template pTemplate="header">
       <tr>
         @for (col of columns; track col.field) {
@@ -9,13 +10,15 @@
     </ng-template>
 
     <ng-template pTemplate="body" let-athlete let-rowIndex="rowIndex">
-      <tr [class]="rowHighlightClass(rowIndex)">
+      <tr [ngClass]="rowHighlightClass(rowIndex)">
         <td>{{ athlete.position }}</td>
-        <td>{{ athlete.name }}</td>
+        <td class="sticky-column">{{ athlete.name }}</td>
+
         @for (event of athlete.eventPoints; track event.name) {
           <td>{{ event.points }}</td>
         }
       </tr>
     </ng-template>
+
   </p-table>
 </div>

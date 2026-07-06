@@ -1,7 +1,10 @@
 <section class="results-page">
   <header class="results-header">
-    <h1>Resultados</h1>
-    <button class="export-btn" (click)="exportCsv()">Exportar CSV</button>
+    <h1 class="results-title">Resultados</h1>
+
+    <button class="export-btn" (click)="exportCsv()">
+      Exportar CSV
+    </button>
   </header>
 
   <app-results-table [columns]="columns"></app-results-table>

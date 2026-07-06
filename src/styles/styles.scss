@@ -3,6 +3,9 @@
 @use 'typography';
 @use 'animations';
 
+/* You can add global styles to this file, and also import other style files */
+@import url('https://googleapis.com');
+
 :root {
   // Cores expostas como CSS custom properties para uso em QUALQUER
   // arquivo .css de componente (que não pode dar @use em .scss)
@@ -48,3 +51,4 @@ body {
   background-color: var(--color-surface);
   color: var(--color-text);
 }
+

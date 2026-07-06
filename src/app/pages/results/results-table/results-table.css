@@ -1,57 +1,128 @@
+/* Wrapper para rolagem horizontal */
 .table-scroll-wrapper {
   width: 100%;
   overflow-x: auto;
-  background: #fff;
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
 }
 
-:host ::ng-deep .results-table {
-  min-width: 1200px;
+/* Tabela base */
+:host ::ng-deep .results-table .p-datatable-table {
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  width: 100%;
+  min-width: 600px; /* garante espaço mínimo antes de espremer, força scroll */
 }
 
-:host ::ng-deep .results-table table {
-  border-collapse: separate;
-  border-spacing: 0 10px; /* espaço entre as linhas */
-}
-
-:host ::ng-deep .results-table thead th {
-  background: #f8fafc;
-  color: #334155;
+/* ===== CABEÇALHO ===== */
+:host ::ng-deep .results-table .p-datatable-thead > tr > th {
+  background-color: #f8fafc;
+  color: #64748b;
+  padding: 14px 16px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 16px;
-  text-align: center;
-  border: none;
-  white-space: nowrap;
-}
-
-:host ::ng-deep .results-table tbody td {
-  background: #fff;
-  padding: 16px;
-  text-align: center;
-  border-top: 1px solid #eef2f7;
-  border-bottom: 1px solid #eef2f7;
-}
-
-:host ::ng-deep .results-table tbody td:first-child {
-  border-left: 1px solid #eef2f7;
-  border-radius: 12px 0 0 12px;
-}
-
-:host ::ng-deep .results-table tbody td:last-child {
-  border-right: 1px solid #eef2f7;
-  border-radius: 0 12px 12px 0;
-  font-weight: 700;
-  color: #2563eb;
-}
-
-:host ::ng-deep .results-table tbody tr:hover td {
-  background: #f8fbff;
-}
-
-:host ::ng-deep .results-table tbody td:nth-child(2),
-:host ::ng-deep .results-table thead th:nth-child(2) {
+  border-bottom: 1px solid #e2e8f0;
   text-align: left;
-  min-width: 220px;
+}
+
+/* Largura por coluna (cabeçalho) */
+:host ::ng-deep .results-table .p-datatable-thead > tr > th:nth-child(1) {
+  min-width: 60px;
+}
+
+:host ::ng-deep .results-table .p-datatable-thead > tr > th:nth-child(2) {
+  min-width: 160px;
+}
+
+:host ::ng-deep .results-table .p-datatable-thead > tr > th:nth-child(n+3) {
+  min-width: 90px;
+}
+
+/* ===== LINHAS E CÉLULAS ===== */
+:host ::ng-deep .results-table .p-datatable-tbody > tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td {
+  padding: 16px;
+  color: #1e293b;
+  font-size: 14px;
+  border: none;
+}
+
+/* Largura por coluna (células) */
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td:nth-child(1) {
+  min-width: 60px;
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td:nth-child(2) {
+  min-width: 160px;
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td:nth-child(n+3) {
+  min-width: 90px;
+}
+
+/* Última coluna (Pontuação Total) em negrito */
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td:last-child {
+  font-weight: 700;
+}
+
+/* ===== COLUNA "NOME" FIXA (STICKY) AO ROLAR ===== */
+:host ::ng-deep .results-table .p-datatable-thead > tr > th:nth-child(2) {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #f8fafc; /* precisa de cor sólida própria no cabeçalho */
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr > td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: inherit; /* herda a cor da linha (branco, ouro, prata, bronze) */
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.15); /* separa visualmente do resto */
+}
+
+/* ===== DESTAQUES: OURO, PRATA, BRONZE ===== */
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-gold {
+  background-color: #fef3c7 !important;
+}
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-gold > td {
+  background-color: inherit !important;
+  color: #000000;
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-silver {
+  background-color: #e2e8f0 !important;
+}
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-silver > td {
+  background-color: inherit !important;
+  color: #000000;
+}
+
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-bronze {
+  background-color: #ffedd5 !important;
+}
+:host ::ng-deep .results-table .p-datatable-tbody > tr.row-bronze > td {
+  background-color: inherit !important;
+  color: #000000;
+}
+
+/* ===== RESPONSIVIDADE: TELAS MENORES ===== */
+@media (max-width: 768px) {
+  :host ::ng-deep .results-table .p-datatable-thead > tr > th {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  :host ::ng-deep .results-table .p-datatable-tbody > tr > td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  :host ::ng-deep .results-table .p-datatable-table {
+    min-width: 500px; /* um pouco mais compacto no mobile */
+  }
 }

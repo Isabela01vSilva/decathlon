@@ -28,15 +28,15 @@ export class Results {
       field: 5,
     },
     {
-      header: 'Long jump',
+      header: 'Salto em Distância',
       field: 3,
     },
     {
-      header: 'Shot put',
+      header: 'Arremesso de Peso',
       field: 4,
     },
     {
-      header: 'High jump',
+      header: 'Salto em Altura',
       field: 5,
     },
     {
@@ -44,19 +44,19 @@ export class Results {
       field: 6,
     },
     {
-      header: '110 m hurdles',
+      header: '110 m com Barreira',
       field: 7,
     },
     {
-      header: 'Discus throw',
+      header: 'Lançamento de Disco',
       field: 8,
     },
     {
-      header: 'Pole vault',
+      header: 'Salto com Vara',
       field: 9,
     },
     {
-      header: 'Javelin throw',
+      header: 'Lançamento de Dardo',
       field: 10,
     },
     {

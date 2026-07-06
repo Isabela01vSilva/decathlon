@@ -1,5 +1,7 @@
 <div class="table-scroll-wrapper">
-  <p-table [value]="athletes()" [scrollable]="true" scrollHeight="flex" styleClass="results-p-table">
+  <p-table
+   [value]="athletes()"
+  styleClass="results-table">
     <ng-template pTemplate="header">
       <tr>
         @for (col of columns; track $index) {

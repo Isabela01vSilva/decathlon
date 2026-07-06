@@ -1,57 +1,70 @@
 <app-profile-header></app-profile-header>
 
-<div class="container">
+<div class="page-container">
 
-<h4>Habilidades tecnicas</h4>
-<div class="container-info">
-  <app-info-chip icon="pi pi-desktop" label="Angular"></app-info-chip>
-  <app-info-chip icon="pi pi-code" label="Typescript"></app-info-chip>
-  <app-info-chip icon="pi pi-palette" label="Tailwdcss"></app-info-chip>
-  <app-info-chip icon="pi pi-code" label="HTML5"></app-info-chip>
-  <app-info-chip icon="pi pi-palette" label="CSS"></app-info-chip>
-  <app-info-chip icon="pi pi-sync" label="RxJS"></app-info-chip>
-  <app-info-chip icon="pi pi-prime" label="PrimeNG"></app-info-chip>
-  <app-info-chip icon="pi pi-box" label="Java"></app-info-chip>
-  <app-info-chip icon="pi pi-server" label="Spring Boot"></app-info-chip>
-  <app-info-chip icon="pi pi-github" label="Git"></app-info-chip>
-  <app-info-chip icon="pi pi-database" label="MySQL"></app-info-chip>
-  <app-info-chip icon="pi pi-database" label="SQL Sever"></app-info-chip>
-</div>
+  <section class="section">
+    <h4 class="section-title">Habilidades técnicas</h4>
 
-<h4>Contato</h4>
-<div class="container-info">
+    <div class="container-info">
+      <app-info-chip icon="pi pi-desktop" label="Angular"></app-info-chip>
+      <app-info-chip icon="pi pi-code" label="Typescript"></app-info-chip>
+      <app-info-chip icon="pi pi-palette" label="Tailwindcss"></app-info-chip>
+      <app-info-chip icon="pi pi-code" label="HTML5"></app-info-chip>
+      <app-info-chip icon="pi pi-palette" label="CSS"></app-info-chip>
+      <app-info-chip icon="pi pi-sync" label="RxJS"></app-info-chip>
+      <app-info-chip icon="pi pi-prime" label="PrimeNG"></app-info-chip>
+      <app-info-chip icon="pi pi-box" label="Java"></app-info-chip>
+      <app-info-chip icon="pi pi-server" label="Spring Boot"></app-info-chip>
+      <app-info-chip icon="pi pi-github" label="Git"></app-info-chip>
+      <app-info-chip icon="pi pi-database" label="MySQL"></app-info-chip>
+      <app-info-chip icon="pi pi-database" label="SQL Server"></app-info-chip>
+    </div>
+  </section>
 
-  <app-contact-link icon="pi pi-envelope" label="isabelavsilva4@gmail.com"
-    url="mailto:isabelavsilva4@gmail.com"></app-contact-link>
-  <app-contact-link icon="pi pi-linkedin" label="linkedin.com/in/isabela-silva"
-    url="https://linkedin.com/in/isabela-silva"></app-contact-link>
-  <app-contact-link icon="pi pi-github" label="github.com/Isabela01vSilva"
-    url="https://github.com/Isabela01vSilva"></app-contact-link>
-</div>
+  <section class="section">
+    <h4 class="section-title">Contato</h4>
 
-<h4>Projetos em destaques</h4>
-<div class="container-info">
+    <div class="container-info">
+      <app-contact-link icon="pi pi-envelope" label="isabelavsilva4@gmail.com"
+        url="mailto:isabelavsilva4@gmail.com"></app-contact-link>
 
+      <app-contact-link icon="pi pi-linkedin" label="linkedin.com/in/isabela-silva"
+        url="https://www.linkedin.com/in/isabela01vsilva"></app-contact-link>
 
-  <app-project-card title="bank-dashboard"
-    bio="Sistema financeiro moderno desenvolvido com Angular, simulando uma plataforma bancária completa com módulos para autenticação, controle financeiro, agendamentos, gastos e cartão de crédito."
-    url="https://github.com/Isabela01vSilva/bank-dashboard.git">
-    <app-info-chip icon="pi pi-desktop" label="Angular"></app-info-chip>
-  </app-project-card>
+      <app-contact-link icon="pi pi-github" label="github.com/Isabela01vSilva"
+        url="https://github.com/Isabela01vSilva"></app-contact-link>
+    </div>
+  </section>
 
-  <app-project-card title="bank"
-    bio="Sistema de gerenciamento bancário desenvolvido em Java com Spring Boot, utilizando MySQL, para controle de contas, transações e agendamentos."
-    url="https://github.com/Isabela01vSilva/bank.git">
-    <app-info-chip icon="pi pi-box" label="Java"></app-info-chip>
-  </app-project-card>
-</div>
+  <section class="section">
+    <h4 class="section-title">Projetos em destaque</h4>
 
-<h4>Fora do trabalho</h4>
-<div class="container-info">
+    <div class="container-info">
+      <app-project-card class="fade-in-up delay-2" title="bank-dashboard"
+        bio="Sistema financeiro moderno desenvolvido com Angular..."
+        url="https://github.com/Isabela01vSilva/bank-dashboard.git">
 
-  <app-info-chip icon="pi pi-star" label="Volei de praia"></app-info-chip>
-  <app-info-chip icon="pi pi-heart-fill" label="Musculação"></app-info-chip>
-  <app-info-chip icon="pi pi-th-large" label="Xadrez"></app-info-chip>
-  <app-info-chip icon="pi pi-book" label="Livros"></app-info-chip>
-</div>
+        <app-info-chip icon="pi pi-desktop" label="Angular"></app-info-chip>
+      </app-project-card>
+
+      <app-project-card class="fade-in-up delay-2" title="bank"
+        bio="Sistema de gerenciamento bancário desenvolvido em Java..."
+        url="https://github.com/Isabela01vSilva/bank.git">
+
+        <app-info-chip icon="pi pi-box" label="Java"></app-info-chip>
+      </app-project-card>
+    </div>
+  </section>
+
+  <section class="section">
+    <h4 class="section-title">Fora do trabalho</h4>
+
+    <div class="container-info">
+      <app-info-chip class="info-chip--personal" icon="pi pi-star" label="Vôlei de praia"></app-info-chip>
+      <app-info-chip class="info-chip--personal" icon="pi pi-heart-fill" label="Musculação"></app-info-chip>
+      <app-info-chip class="info-chip--personal" icon="pi pi-th-large" label="Xadrez"></app-info-chip>
+      <app-info-chip class="info-chip--personal" icon="pi pi-book" label="Livros"></app-info-chip>
+    </div>
+  </section>
+
 </div>

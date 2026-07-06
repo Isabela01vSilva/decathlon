@@ -1,14 +1,45 @@
-.info-chip {
+.contact-chip {
   display: inline-flex;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 500;
 }
 
-.info-chip a {
+.contact-chip__link {
   display: inline-flex;
   align-items: center;
-  color: #000000c9;
+  gap: var(--spacing-sm);
+
+  padding: var(--spacing-sm) var(--spacing-md);
+
   text-decoration: none;
-  gap: 10px;
+
+  background-color: var(--color-surface);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text);
+
+  transition:
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.contact-chip__link:hover {
+  color: var(--color-primary);
+
+  border-color: var(--color-primary-light);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-chip__icon {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.contact-chip__label {
+  font-size: 0.9rem;
+  font-weight: 500;
 }

@@ -1,15 +1,25 @@
-<div class="container">
-  <p class="title">{{ title }}</p>
-  <p class="conteudo">{{ bio }}</p>
+<div class="project-card fade-in">
 
-  <div class="chips">
+  <h3 class="project-card__title">
+    {{ title }}
+  </h3>
+
+  <p class="project-card__description">
+    {{ bio }}
+  </p>
+
+  <div class="project-card__chips">
     <ng-content></ng-content>
   </div>
 
-  <a [href]="url" [target]="url.startsWith('mailto:') ? '_self' : '_blank'"
-    [rel]="url.startsWith('mailto:') ? null : 'noopener noreferrer'" class="contact-link">
+  <a
+    class="project-card__link"
+    [href]="url"
+    [target]="url.startsWith('mailto:') ? '_self' : '_blank'"
+    [rel]="url.startsWith('mailto:') ? null : 'noopener noreferrer'"
+  >
     <i class="pi pi-github"></i>
-    <span>Ver no Github</span>
+    <span>Ver no GitHub</span>
   </a>
 
 </div>

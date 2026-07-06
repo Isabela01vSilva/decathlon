@@ -1,50 +1,66 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 16px 24px;
-    border-bottom: 1px solid #e5e5e5;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  padding: 24px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: var(--color-surface);
 }
 
+/* Brand */
 .navbar-title {
-    font-weight: 700;
-    font-size: 20px;
-    color: #000000;
-    cursor: default;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
 }
 
+/* Links container */
 .navbar-links {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
+/* Links base */
 .navbar-links a {
-    color: #5b5b5d;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: var(--color-text-muted);
+
+  padding: 8px;
+  border-radius: 4px;
+
+  transition: all var(--transition-base);
 }
 
+/* Hover sem layout shift */
 .navbar-links a:hover {
-    font-weight: 700;
+  color: var(--color-text);
+  font-weight: 600;
 }
 
+/* Active state */
 .navbar-links a.active {
-    font-weight: 700;
-    color: #0f172a;
-    background-color: #e0f2fe;
-    border-radius: 5px;
-    padding: 6px 12px;
+  color: var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.12);
+  font-weight: 600;
 }
 
+/* Mobile */
 @media (max-width: 480px) {
-    .navbar {
-        display: flex;
-        align-items: center;
-    }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    gap: 8px;
+  }
 }

@@ -1,11 +1,31 @@
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px;
+.app-header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.app-main {
+  min-height: calc(100vh - 64px);
+}
+
+/**
+ * Container central da aplicação
+ * Mantém consistência de largura em todas as páginas
+ */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    .content {
-        padding: 16px;
-    }
+  .app-container {
+    padding: 30px;
+  }
 }

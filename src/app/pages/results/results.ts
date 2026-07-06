@@ -74,8 +74,8 @@ export class Results {
     console.log(this.athletes());
     const headers = this.columns.map((c) => c.header);
     const rows = this.athletes().map((athlete) => [
-      athlete.name,
       athlete.position,
+      athlete.name,
       ...athlete.modalityPoints.map((mp) => mp.points),
     ]);
 

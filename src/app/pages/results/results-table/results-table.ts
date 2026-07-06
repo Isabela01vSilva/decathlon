@@ -1,19 +1,81 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
-import { AthleteResult, ColumnDef, RESULT_COLUMNS } from '../../models/athlete-result.model';
+import { AthleteResult, ColumnDef } from '@models/athlete-result.model';
+import { ResultsService } from '@service/results.service';
 
 @Component({
   selector: 'app-results-table',
   standalone: true,
   imports: [CommonModule, TableModule],
   templateUrl: './results-table.html',
-  styleUrls: ['./results-table.scss'],
+  styleUrls: ['./results-table.css'],
 })
-export class ResultsTableComponent {
+export class ResultsTableComponent implements OnInit {
   @Input() results: AthleteResult[] = [];
 
-  columns: ColumnDef[] = RESULT_COLUMNS;
+  private readonly resultsService: ResultsService = inject(ResultsService);
+
+  athletes = this.resultsService.athletes;
+
+  columns: ColumnDef[] = [
+    {
+      header: 'Posição',
+      field: 1,
+    },
+    {
+      header: 'Nome do Atleta',
+      field: 2,
+    },
+    {
+      header: '100 m',
+      field: 5,
+    },
+    {
+      header: 'Long jump',
+      field: 3,
+    },
+    {
+      header: 'Shot put',
+      field: 4,
+    },
+    {
+      header: 'High jump',
+      field: 5,
+    },
+    {
+      header: '400 m',
+      field: 6,
+    },
+    {
+      header: '110 m hurdles',
+      field: 7,
+    },
+    {
+      header: 'Discus throw',
+      field: 8,
+    },
+    {
+      header: 'Pole vault',
+      field: 9,
+    },
+    {
+      header: 'Javelin throw',
+      field: 10,
+    },
+    {
+      header: '1500 m',
+      field: 11,
+    },
+    {
+      header: 'Total de Pontos',
+      field: 11,
+    },
+  ];
+
+  ngOnInit(): void {
+    console.log(this.athletes());
+  }
 
   /**
    * Retorna a classe de destaque da linha com base na posição de chegada.

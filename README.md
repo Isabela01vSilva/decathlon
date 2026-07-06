@@ -56,7 +56,7 @@ git clone https://github.com/Isabela01vSilva/decathlon.git
 2. Acesse a pasta do projeto:
 
 ```bash
-cd posts-manager
+cd decathlon
 ```
 
 3. Instale as dependências:

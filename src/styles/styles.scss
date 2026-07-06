@@ -1,0 +1,50 @@
+// Ponto de entrada único do design system global da aplicação
+@use 'variables';
+@use 'typography';
+@use 'animations';
+
+:root {
+  // Cores expostas como CSS custom properties para uso em QUALQUER
+  // arquivo .css de componente (que não pode dar @use em .scss)
+  --color-primary: #{variables.$primary};
+  --color-primary-light: #{variables.$primary-light};
+  --color-primary-dark: #{variables.$primary-dark};
+
+  --color-secondary: #{variables.$secondary};
+  --color-secondary-light: #{variables.$secondary-light};
+
+  --color-success: #{variables.$success};
+  --color-warning: #{variables.$warning};
+  --color-danger: #{variables.$danger};
+
+  --color-surface: #{variables.$surface};
+  --color-text: #{variables.$text};
+  --color-text-muted: #{variables.$text-muted};
+
+  --spacing-xs: #{variables.$spacing-xs};
+  --spacing-sm: #{variables.$spacing-sm};
+  --spacing-md: #{variables.$spacing-md};
+  --spacing-lg: #{variables.$spacing-lg};
+  --spacing-xl: #{variables.$spacing-xl};
+
+  --radius-sm: #{variables.$radius-sm};
+  --radius-md: #{variables.$radius-md};
+  --radius-lg: #{variables.$radius-lg};
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 200ms ease-in-out;
+  --transition-slow: 250ms ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}

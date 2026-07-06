@@ -1,7 +1,7 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
-import { AthleteResult, ColumnDef } from '@models/athlete-result.model';
+import { ColumnDef } from '@core/models/athlete-result.model';
 import { ResultsService } from '@service/results.service';
 
 @Component({
@@ -11,17 +11,11 @@ import { ResultsService } from '@service/results.service';
   templateUrl: './results-table.html',
   styleUrls: ['./results-table.css'],
 })
-export class ResultsTableComponent implements OnInit {
-
+export class ResultsTableComponent {
   private readonly resultsService: ResultsService = inject(ResultsService);
 
   athletes = this.resultsService.athletes;
-
-  @Input() columns!: ColumnDef[]
-
-  ngOnInit(): void {
-    /* console.log(this.athletes()); */
-  }
+  @Input() columns!: ColumnDef[];
 
   /**
    * Retorna a classe de destaque da linha com base na posição de chegada.
@@ -40,11 +34,4 @@ export class ResultsTableComponent implements OnInit {
         return '';
     }
   }
-
-  formatNumber(value: number): string {
-    return value.toFixed(2);
-  }
 }
-
-
-

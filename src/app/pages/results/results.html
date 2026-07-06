@@ -1,17 +1,13 @@
 <section class="results-page">
   <header class="results-header">
     <h1>Resultados</h1>
-    <button
-    class="export-btn"
-      (click)="exportarCsv()"
-    >Exportar CSV</button>
+    <button class="export-btn" (click)="exportCsv()">Exportar CSV</button>
   </header>
 
-   <app-results-table [columns]="columns"></app-results-table>
+  <app-results-table [columns]="columns"></app-results-table>
 
   <p class="results-footnote">
     Nota: atletas empatados dividem a posição. O intervalo indica a faixa de
     colocação ocupada pelos atletas com a mesma pontuação total.
   </p>
 </section>
-

@@ -8,7 +8,7 @@ import { AvatarModule } from 'primeng/avatar';
   styleUrl: './profile-header.css',
 })
 export class ProfileHeader {
-  profileImage: string = 'minha.jpg';
+  profileImage: string = 'assets/images/profile-photo.jpg';
   initials = 'IS';
   name = 'Isabela Silva';
   title = 'Desenvolvedor Front-end Jr';

@@ -1,0 +1,29 @@
+@use 'variables';
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: variables.$text;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: variables.$text-muted;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: variables.$text;
+}
+
+// Mobile-first: aumenta o título só a partir de tablet/desktop
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}

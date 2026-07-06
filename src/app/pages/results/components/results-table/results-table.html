@@ -1,21 +1,19 @@
 <div class="table-scroll-wrapper">
-  <p-table
-   [value]="athletes()"
-  styleClass="results-table">
+  <p-table [value]="athletes()" styleClass="results-table">
     <ng-template pTemplate="header">
       <tr>
-        @for (col of columns; track $index) {
-        <th>{{ col.header }}</th>
+        @for (col of columns; track col.field) {
+          <th>{{ col.header }}</th>
         }
       </tr>
     </ng-template>
 
     <ng-template pTemplate="body" let-athlete let-rowIndex="rowIndex">
-      <tr [ngClass]="rowHighlightClass(rowIndex)">
+      <tr [class]="rowHighlightClass(rowIndex)">
         <td>{{ athlete.position }}</td>
         <td>{{ athlete.name }}</td>
-        @for (modality of athlete.modalityPoints; track $index) {
-        <td>{{ modality.points }}</td>
+        @for (event of athlete.eventPoints; track event.name) {
+          <td>{{ event.points }}</td>
         }
       </tr>
     </ng-template>
